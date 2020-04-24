@@ -1,0 +1,59 @@
+body{
+    background-color: white;
+    
+    ::selection{
+        background-color: yellow;
+        color:red;
+    }
+}
+%headerVar{
+    background-color: #282c34;    
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    display: flex;
+    flex-direction: column;    
+    color: white;      
+}
+%imgVar{
+  height: 40vmin;
+  margin: 5px;
+  padding: 40px;
+}
+.pageHeader{
+    @extend %headerVar; 
+    height: 150px;
+    margin-bottom: 25px;
+}
+header{
+    @extend %headerVar;
+  min-height: 100vh;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .homeImg {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.homeImg{
+  @extend %imgVar;
+  pointer-events: none;
+}
+.imgInt {
+  @extend %imgVar;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#favourite{
+  text-align: left;
+  color: springgreen;
+}
+#favourite2{
+  text-align: left;
+  color: mediumblue;
+}
